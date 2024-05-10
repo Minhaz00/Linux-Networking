@@ -4,7 +4,7 @@
 Egress traffic denotes network traffic departing or being transmitted from a particular network or device. It encapsulates data flow from the internal network to an external network or destination. Egress traffic constitutes the outbound flow from a network or device to another network or the internet.
 
 ## Connecting a container network namespace to root network namespace
-See the documentation: (Network ns and root connection)[] for steps on connecting a container network namespace to the root network namespace.
+See the documentation: [Network ns and root connection](https://github.com/Minhaz00/Linux-Networking/blob/main/Network%20ns%20and%20root%20connection.md) for steps on connecting a container network namespace to the root network namespace.
 
 
 ## Ping 8.8.8.8 from ns0
