@@ -13,7 +13,7 @@ In the context of Linux namespaces, a bridge allows virtual network interfaces f
 
 In this doc, we want to establish a Linux Bridge Network among the 3 namespaces: `red-ns`, `blue-ns`, and `green-ns` and facilitate seamless communication between them.
 
-![alt text](./images/image-Lab6.png)
+![alt text](./images/image-6.png)
 
 Setting up a Linux Bridge Network among namespaces involves several steps to create a seamless communication environment. 
 
