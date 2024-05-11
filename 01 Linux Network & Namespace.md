@@ -36,7 +36,15 @@ Linux namespaces provide a way to partition system resources such as process IDs
 
 
 ### Network Namespace 
-Network namespaces provide isolation for network resources such as network interfaces, routing tables, and firewall rules. This allows you to create virtual network environments, each with its own network configuration. For instance, you can create a network namespace for a development environment, enabling developers to test network configurations without affecting the production network.
+Network namespaces provide isolation for network resources such as network interfaces, routing tables, and firewall rules. This allows you to create virtual network environments, each with its own network configuration. For instance, you can create a network namespace for a development environment, enabling developers to test network configurations without affecting the production network. Think of them as rooms within a house – each namespace isolates processes just like rooms provide privacy to individuals. When you create a container, you essentially create a special room (namespace) for it on the host, ensuring it is isolated from other processes. 
+
+When you list processes from within a container, we'll only see its own processes, typically with a single process ID. However, as a root user from the underlying host, we'll see all processes, including those running inside the container but with different process IDs. This demonstrates how namespaces isolate processes within containers.
+
+In addition to process isolation, network namespaces also isolate networking resources. Each container gets its own virtual interfaces, routing tables, and ARP tables within its namespace. This ensures that containers have no visibility to network-related information on the host.
+
+Docker leverages network namespaces to provide isolated networking environments for containers. When you create a Docker container, it gets its own network namespace, allowing it to have its own interfaces and network configuration separate from the host.
+
+
 
 
 ### Host and Namespace
